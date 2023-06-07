@@ -1,0 +1,64 @@
+body{
+    box-sizing: border-box;
+    background-color: #ddd;
+    color: #ddd;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container{
+    width: 1000px;
+    margin: 30px auto;
+
+    display: grid;
+    // // grid-template-rows: min-content max-content;
+    // grid-template-columns: min-content 1fr minmax(150px, min-content) max-content;
+    // // grid-template-rows: min-content  90px ;
+    // grid-template-rows: repeat (2, minmax(150px, min-content));
+        grid-template-rows: repeat(3, 1fr);
+        //grid-template-columns: repeat(auto-fill, 100px); //auto-fill creates as many track that fit ther given width and container width (1000px, 100px = 10 tracks and places all items in this tracks)
+        //grid-template-columns: repeat(auto-fit, 100px); //auto-fit creates the same but collapses the empty ones to width 0 making them invisible.
+        width: 90vw;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    .item{
+        padding: 10px;
+        &--1{
+            background-color: #002B5B;
+        }
+        &--2{
+            background-color: #EA5455;
+
+        }
+        &--3{
+            background-color: #116D6E;
+        }
+
+        &--4{
+            background-color: rgb(9, 77, 54);
+
+        }
+        
+        &--5{
+            background-color: #CD1818;
+        }
+
+        &--6{
+            background-color: rgb(189, 62, 15);
+        }
+
+        &--7{
+            background-color: rgb(93, 82, 42);
+
+        }
+
+        &--8{
+            background-color: rgb(48, 51, 136);
+
+        }
+        &--9{
+            background-color: rgb(102, 27, 84);
+        }
+    }
+
+}

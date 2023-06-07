@@ -1,0 +1,166 @@
+body{
+    box-sizing: border-box;
+    background-color: #ddd;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ddd;
+    margin: auto;
+
+
+    display: grid;
+    //grid-template-rows: 150px 150px;
+    // grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+
+    grid-auto-rows: 80px;
+    grid-auto-flow: column dense; //row 
+    //grid-auto-columns: .5fr;
+
+    //align grid item tyo grid areas:
+    align-items: center; //EACH ITEM WILL PLACE ITS CONTENT INT THE CENTER OF ITS AREA HORIZONTAL// stretch / center / end / start;
+    justify-items: center; //EACH ITEM WILL PLACE ITS CONTENT INT THE CENTER OF ITS AREA VERTICAL
+   
+    // align grid tracks to grid container:
+    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(2, 200px);
+    justify-content: space-between; // center / start / end / space-between / space-around // space-evenly
+    align-content: space-between; // center / start / end / space-between / space-around // space-evenly
+    //dark blue 002B5B //salmon EA5455 //red CD1818 //yellow E8AA42 //light blue 025464 //white F8F1F1 // green 094d36
+    .item{
+        background-color: rgb(189, 62, 15);
+        color: #ddd;
+        font-size: 30px;
+        // display: flex;
+        // align-items: center;;
+
+        &--1{
+            background-color: #002B5B;
+        }
+        &--2{
+            background-color: #EA5455;
+            justify-self: stretch;
+            align-self: stretch;
+        }
+        &--3{
+            background-color: #116D6E;
+        }
+
+        &--4{
+            background-color: rgb(9, 77, 54);
+            grid-row: 2 / span 3;
+            align-self: stretch;
+        }
+        
+        &--5{
+            background-color: #CD1818;
+            align-self: end;
+            justify-self: end;
+        }
+
+        &--6{
+            align-self: start;
+            justify-self: start;
+        }
+
+        &--7{
+            background-color: rgb(93, 82, 42);
+            grid-row: 1 / -1;
+            align-self: end;
+            justify-self: start;
+        }
+
+        &--8{
+            background-color: rgb(48, 51, 136);
+            grid-column: 1 / span 2;
+            justify-self: stretch;
+        }
+    }
+
+}
+
+
+
+/* exercise1 */
+/* .container{
+    width: 900px;
+    height: 600px;
+    padding: 20px;
+    margin: auto;
+
+    background-color: beige;
+    color: white;
+
+    display: grid;
+    grid-template-rows: [header-start] 150px [header-end box-start] 200px [box-end main-start] 400px [main-end footer-start] 150px [footer-end];
+    grid-template-columns:  repeat(3,[col-start] 1fr [col-end]) 150px [grid-end];
+    gap: 20px;
+
+    grid-template-areas: "head head head ."
+                         "box1 box2 box3  side"
+                         "main main main side"
+                         "foot foot foot foot";
+} */
+
+
+/* .container > *{
+    background-color: brown;
+} */
+
+/* .header{
+    grid-column: col-start 1/ grid-end;
+    
+}
+.sidebar{
+    grid-column: 4 /5;
+    grid-row: box-start / main-end;
+}
+
+.footer{
+    grid-column: 1 / -1;
+    grid-row: footer-start / footer-end;
+}
+
+.box--1,
+.box--2,
+.box--3{
+    grid-row: 2 / 3;
+}
+
+.main{
+    grid-column: col-start 1 / col-end 3;
+    grid-row: main-start / main-end;
+} */
+
+/* exercise2 */
+/* .header{
+    grid-area: head;
+}
+.sidebar{
+    grid-area: side;
+}
+
+.footer{
+    grid-area: foot;
+}
+
+.box--1{
+    grid-area: box1;
+}
+.box--2{
+    grid-area:  box2;
+}
+.box--3{
+    grid-area:  box3;
+}
+
+.main{
+    grid-area: main;
+} */
+
+/* exercise3*/
